@@ -9,9 +9,9 @@ public class JDBCConnectionTest
 
         try
         {
-            String userName = "sobaadmin";
-            String password = "sobaadmin";
-            String url = "jdbc:mysql://localhost:3306/soba";
+            String userName = "DaveSugrue";
+            String password = "letMeIn";
+            String url = "jdbc:mysql://sugrue.ddns.net:3306/soba";
             Class.forName ("com.mysql.jdbc.Driver").newInstance ();
             conn = DriverManager.getConnection (url, userName, password);
             System.out.println ("Database connection established");
