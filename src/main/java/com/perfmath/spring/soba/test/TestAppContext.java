@@ -13,6 +13,6 @@ public class TestAppContext {
 		SobaConfig sobaConfig = context.getBean("sobaConfig", SobaConfig.class);
 		System.out.println ("Database vendor for SOBA: " + sobaConfig.getDatabaseVendor());
 		// no need to use the getBean method
-		//System.out.println ("Database vendor for SOBA: " + SobaConfig.getDatabaseVendor());
+		System.out.println ("Database vendor for SOBA: " + SobaConfig.getDatabaseVendor());
 	}
 }
