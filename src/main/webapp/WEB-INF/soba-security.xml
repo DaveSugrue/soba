@@ -15,7 +15,7 @@
 	</global-method-security>
 
 	<http use-expressions="true">
-		<!--   intercept-url pattern="/**" requires-channel="https" / -->
+		<!-- <intercept-url pattern="/**" requires-channel="https" / -->
 		<csrf disabled="true"/>
 		<intercept-url pattern="/**" />
 		<http-basic />
@@ -42,8 +42,8 @@
 		<authentication-provider>
 			<password-encoder ref="bcrypt" />
 			<jdbc-user-service data-source-ref="dataSource"
-				users-by-username-query="SELECT username, password, enabled FROM users WHERE username = ?" 
-				authorities-by-username-query="SELECT username, authority FROM authorities WHERE username = ?" />
+				users-by-username-query="SELECT USERNAME, PASSWORD, ENABLED FROM USERS WHERE USERNAME = ?" 
+				authorities-by-username-query="SELECT USERNAME, AUTHORITY FROM AUTHORITIES WHERE USERNAME = ?" />
 		</authentication-provider>
 	</authentication-manager>
 
@@ -91,7 +91,7 @@
 		class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
 		<!--  beans:property name="loginFormUrl" value="/login.jsp" / -->
 		<beans:constructor-arg value="/login.jsp" />
-		<!--   beans:property name="forceHttps" value="true" / -->
+		<!-- beans:property name="forceHttps" value="true" / -->
 		<!--  beans:property name="forceHttps" value="false" / -->
 	</beans:bean>
  
